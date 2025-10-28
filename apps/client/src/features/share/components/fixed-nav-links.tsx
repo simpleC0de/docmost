@@ -48,6 +48,7 @@ export default function FixedNavLinks() {
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
+          className="fixed-nav-link"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -58,13 +59,14 @@ export default function FixedNavLinks() {
             borderRadius: 'var(--SWISSER-radius-md)',
             transition: 'var(--SWISSER-transition-fast)',
             textDecoration: 'none',
+            backgroundColor: 'transparent',
           }}
           styles={{
             root: {
               '&:hover': {
-                backgroundColor: isLight ? '#e5e5e5' : 'var(--SWISSER-bg-tertiary)',
-                color: isLight ? '#000000' : 'var(--SWISSER-text-primary)',
-                transform: 'translateY(-1px)',
+                backgroundColor: `${isLight ? '#e5e5e5' : 'var(--SWISSER-bg-tertiary)'} !important`,
+                color: `${isLight ? '#000000' : 'var(--SWISSER-text-primary)'} !important`,
+                transform: 'translateY(-1px) !important',
               },
             },
           }}

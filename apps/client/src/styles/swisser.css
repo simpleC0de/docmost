@@ -236,6 +236,22 @@ body[data-mantine-color-scheme="light"] {
   border-color: var(--SWISSER-border-color);
 }
 
+/* Fixed Nav Links - Clean Hover State */
+.fixed-nav-link {
+  background-color: transparent !important;
+}
+
+.fixed-nav-link:hover {
+  background-color: var(--SWISSER-bg-tertiary) !important;
+  color: var(--SWISSER-text-primary) !important;
+  transform: translateY(-1px) !important;
+}
+
+[data-mantine-color-scheme="light"] .fixed-nav-link:hover {
+  background-color: #e5e5e5 !important;
+  color: #000000 !important;
+}
+
 /* Utility Classes */
 .SWISSER-text-primary { color: var(--SWISSER-text-primary); }
 .SWISSER-text-secondary { color: var(--SWISSER-text-secondary); }
