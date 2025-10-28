@@ -38,6 +38,7 @@ import { ShareSearchSpotlight } from "@/features/search/components/share-search-
 import { shareSearchSpotlight } from "@/features/search/constants";
 import ShareBranding from '@/features/share/components/share-branding.tsx';
 import FixedNavLinks from '@/features/share/components/fixed-nav-links.tsx';
+import WaveBackground from '@/features/share/components/wave-background.tsx';
 
 const MemoizedSharedTree = React.memo(SharedTree);
 
@@ -215,8 +216,11 @@ export default function ShareShell({
         </AppShell.Navbar>
       )}
 
-      <AppShell.Main>
-        {children}
+      <AppShell.Main style={{ position: 'relative' }}>
+        <WaveBackground />
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          {children}
+        </div>
 
         {data && shareId && !data.hasLicenseKey && <ShareBranding />}
       </AppShell.Main>

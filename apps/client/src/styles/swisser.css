@@ -75,6 +75,19 @@
 [data-mantine-color-scheme="light"] .mantine-AppShell-aside {
   background-color: #f5f5f5 !important;
   border-left: 1px solid #e5e5e5 !important;
+  color: #262626 !important;
+}
+
+[data-mantine-color-scheme="light"] .mantine-AppShell-aside * {
+  color: #262626 !important;
+}
+
+[data-mantine-color-scheme="light"] .mantine-AppShell-aside a {
+  color: #262626 !important;
+}
+
+[data-mantine-color-scheme="light"] .mantine-AppShell-aside a:hover {
+  color: #000000 !important;
 }
 
 [data-mantine-color-scheme="light"] .mantine-AppShell-main {
@@ -163,8 +176,21 @@ body[data-mantine-color-scheme="light"] {
 }
 
 [data-mantine-color-scheme="dark"] .mantine-AppShell-aside {
-  background-color: transparent;
-  border-left: 1px solid var(--SWISSER-border-color);
+  background-color: var(--SWISSER-bg-primary) !important;
+  border-left: 1px solid var(--SWISSER-border-color) !important;
+  color: var(--SWISSER-text-secondary) !important;
+}
+
+[data-mantine-color-scheme="dark"] .mantine-AppShell-aside * {
+  color: var(--SWISSER-text-secondary) !important;
+}
+
+[data-mantine-color-scheme="dark"] .mantine-AppShell-aside a {
+  color: var(--SWISSER-text-secondary) !important;
+}
+
+[data-mantine-color-scheme="dark"] .mantine-AppShell-aside a:hover {
+  color: var(--SWISSER-text-primary) !important;
 }
 
 [data-mantine-color-scheme="dark"] .mantine-AppShell-main {
@@ -218,6 +244,27 @@ body[data-mantine-color-scheme="light"] {
   border-left-color: var(--SWISSER-accent-primary);
 }
 
+/* Table of Contents - Light Mode */
+[data-mantine-color-scheme="light"] .mantine-AppShell-aside * {
+  color: #262626 !important;
+}
+
+[data-mantine-color-scheme="light"] .toc-link {
+  color: #262626 !important;
+  border-left: 2px solid transparent;
+  padding-left: var(--SWISSER-space-sm);
+  transition: var(--SWISSER-transition-fast);
+}
+
+[data-mantine-color-scheme="light"] .toc-link:hover {
+  color: #000000 !important;
+}
+
+[data-mantine-color-scheme="light"] .toc-link.active {
+  color: #000000 !important;
+  border-left-color: var(--SWISSER-accent-primary);
+}
+
 /* Input Fields */
 [data-mantine-color-scheme="dark"] .mantine-Input-input {
   background-color: var(--SWISSER-bg-secondary);
@@ -250,6 +297,20 @@ body[data-mantine-color-scheme="light"] {
 [data-mantine-color-scheme="light"] .fixed-nav-link:hover {
   background-color: #e5e5e5 !important;
   color: #000000 !important;
+}
+
+/* Share Branding - Clean Minimal Style */
+.share-branding-link:hover {
+  color: var(--SWISSER-text-secondary) !important;
+  transform: translateY(-1px);
+}
+
+[data-mantine-color-scheme="light"] .share-branding-link {
+  color: #707070 !important;
+}
+
+[data-mantine-color-scheme="light"] .share-branding-link:hover {
+  color: #262626 !important;
 }
 
 /* Utility Classes */
