@@ -37,6 +37,7 @@ import {
 import { ShareSearchSpotlight } from "@/features/search/components/share-search-spotlight.tsx";
 import { shareSearchSpotlight } from "@/features/search/constants";
 import ShareBranding from '@/features/share/components/share-branding.tsx';
+import FixedNavLinks from '@/features/share/components/fixed-nav-links.tsx';
 
 const MemoizedSharedTree = React.memo(SharedTree);
 
@@ -209,6 +210,7 @@ export default function ShareShell({
 
       {data?.pageTree?.length > 1 && (
         <AppShell.Navbar p="md" className={classes.navbar}>
+          <FixedNavLinks />
           <MemoizedSharedTree sharedPageTree={data} />
         </AppShell.Navbar>
       )}
