@@ -3,7 +3,10 @@ import * as bcrypt from 'bcrypt';
 import { sanitize } from 'sanitize-filename-ts';
 import { FastifyRequest } from 'fastify';
 
-export const envPath = path.resolve(process.cwd(), '..', '..', '.env');
+// Use __dirname instead of process.cwd() to ensure correct path resolution
+// From: apps/server/src/common/helpers/utils.ts
+// To:   .env (5 levels up: helpers -> common -> src -> server -> apps -> root)
+export const envPath = path.resolve(__dirname, '../../../../..', '.env');
 
 export async function hashPassword(password: string) {
   const saltRounds = 12;
