@@ -1,0 +1,170 @@
+/* SWISSER V2 Design System - Shared Pages Styling */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--SWISSER-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--SWISSER-bg-tertiary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--SWISSER-accent-primary);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--SWISSER-bg-tertiary) var(--SWISSER-bg-secondary);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(100%); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes flashSuccess {
+  0% { background: var(--SWISSER-gain-bg); }
+  100% { background: transparent; }
+}
+
+@keyframes flashError {
+  0% { background: var(--SWISSER-loss-bg); }
+  100% { background: transparent; }
+}
+
+/* Share Page Specific Overrides */
+[data-mantine-color-scheme="dark"] .mantine-AppShell-root {
+  --mantine-color-body: var(--SWISSER-bg-primary);
+  --mantine-color-default: var(--SWISSER-bg-card);
+  --mantine-color-default-border: var(--SWISSER-border-color);
+}
+
+/* Editor Headings - Force No Background */
+[data-mantine-color-scheme="dark"] .ProseMirror h1,
+[data-mantine-color-scheme="dark"] .ProseMirror h2,
+[data-mantine-color-scheme="dark"] .ProseMirror h3,
+[data-mantine-color-scheme="dark"] .ProseMirror h4,
+[data-mantine-color-scheme="dark"] .ProseMirror h5,
+[data-mantine-color-scheme="dark"] .ProseMirror h6 {
+  background: none !important;
+  background-color: transparent !important;
+  color: var(--SWISSER-text-primary);
+}
+
+[data-mantine-color-scheme="dark"] .mantine-AppShell-header {
+  background-color: var(--SWISSER-bg-secondary);
+  border-bottom: 1px solid var(--SWISSER-border-color);
+}
+
+[data-mantine-color-scheme="dark"] .mantine-AppShell-navbar {
+  background-color: var(--SWISSER-bg-secondary);
+  border-right: 1px solid var(--SWISSER-border-color);
+}
+
+[data-mantine-color-scheme="dark"] .mantine-AppShell-aside {
+  background-color: transparent;
+  border-left: 1px solid var(--SWISSER-border-color);
+}
+
+[data-mantine-color-scheme="dark"] .mantine-AppShell-main {
+  background-color: var(--SWISSER-bg-primary);
+}
+
+/* Button Overrides */
+[data-mantine-color-scheme="dark"] .mantine-Button-root,
+[data-mantine-color-scheme="dark"] .mantine-ActionIcon-root {
+  border-color: var(--SWISSER-border-color);
+  transition: var(--SWISSER-transition-fast);
+}
+
+[data-mantine-color-scheme="dark"] .mantine-Button-root:hover,
+[data-mantine-color-scheme="dark"] .mantine-ActionIcon-root:hover {
+  border-color: var(--SWISSER-border-hover);
+  transform: translateY(-1px);
+}
+
+/* Tree Navigation Links */
+[data-mantine-color-scheme="dark"] .mantine-TreeNode-label {
+  color: var(--SWISSER-text-secondary);
+  transition: var(--SWISSER-transition-fast);
+}
+
+[data-mantine-color-scheme="dark"] .mantine-TreeNode-label:hover {
+  color: var(--SWISSER-text-primary);
+  transform: translateY(-1px);
+}
+
+[data-mantine-color-scheme="dark"] .mantine-TreeNode-label[data-selected="true"] {
+  color: var(--SWISSER-text-primary);
+  border-left: 3px solid var(--SWISSER-accent-primary);
+  padding-left: calc(var(--SWISSER-space-md) - 3px);
+}
+
+/* Table of Contents */
+[data-mantine-color-scheme="dark"] .toc-link {
+  color: var(--SWISSER-text-secondary);
+  border-left: 2px solid transparent;
+  padding-left: var(--SWISSER-space-sm);
+  transition: var(--SWISSER-transition-fast);
+}
+
+[data-mantine-color-scheme="dark"] .toc-link:hover {
+  color: var(--SWISSER-text-primary);
+}
+
+[data-mantine-color-scheme="dark"] .toc-link.active {
+  color: var(--SWISSER-text-primary);
+  border-left-color: var(--SWISSER-accent-primary);
+}
+
+/* Input Fields */
+[data-mantine-color-scheme="dark"] .mantine-Input-input {
+  background-color: var(--SWISSER-bg-secondary);
+  border-color: var(--SWISSER-border-color);
+  color: var(--SWISSER-text-primary);
+}
+
+[data-mantine-color-scheme="dark"] .mantine-Input-input:focus {
+  border-color: var(--SWISSER-accent-primary);
+  box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.15);
+}
+
+/* Cards & Containers */
+[data-mantine-color-scheme="dark"] .mantine-Card-root {
+  background-color: var(--SWISSER-bg-card);
+  border-color: var(--SWISSER-border-color);
+}
+
+/* Utility Classes */
+.SWISSER-text-primary { color: var(--SWISSER-text-primary); }
+.SWISSER-text-secondary { color: var(--SWISSER-text-secondary); }
+.SWISSER-text-tertiary { color: var(--SWISSER-text-tertiary); }
+.SWISSER-text-muted { color: var(--SWISSER-text-muted); }
+
+.SWISSER-bg-primary { background-color: var(--SWISSER-bg-primary); }
+.SWISSER-bg-secondary { background-color: var(--SWISSER-bg-secondary); }
+.SWISSER-bg-card { background-color: var(--SWISSER-bg-card); }
+.SWISSER-bg-elevated { background-color: var(--SWISSER-bg-elevated); }
+
+.SWISSER-font-mono { font-family: var(--mantine-font-family-monospace); }
+
+.SWISSER-flash-success { animation: flashSuccess 0.6s ease; }
+.SWISSER-flash-error { animation: flashError 0.6s ease; }

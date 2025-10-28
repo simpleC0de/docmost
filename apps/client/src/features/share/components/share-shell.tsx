@@ -78,10 +78,10 @@ export default function ShareShell({
 
   return (
     <AppShell
-      header={{ height: 50 }}
+      header={{ height: 60 }}
       {...(data?.pageTree?.length > 1 && {
         navbar: {
-          width: 300,
+          width: 280,
           breakpoint: "sm",
           collapsed: {
             mobile: !mobileOpened,
@@ -90,7 +90,7 @@ export default function ShareShell({
         },
       })}
       aside={{
-        width: 300,
+        width: 240,
         breakpoint: "sm",
         collapsed: {
           mobile: !mobileTocOpened,
@@ -100,8 +100,8 @@ export default function ShareShell({
       padding="md"
     >
       <AppShell.Header>
-        <Group wrap="nowrap" justify="space-between" py="sm" px="xl">
-          <Group wrap="nowrap">
+        <Group wrap="nowrap" justify="space-between" py="sm" px="xl" h={60}>
+          <Group wrap="nowrap" gap="md">
             {data?.pageTree?.length > 1 && (
               <>
                 <Tooltip label={t("Sidebar toggle")}>
@@ -125,46 +125,69 @@ export default function ShareShell({
                 </Tooltip>
               </>
             )}
+
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '2px'
+            }}>
+              <div style={{
+                fontSize: '20px',
+                fontWeight: 900,
+                letterSpacing: '-0.5px',
+                lineHeight: 1
+              }}>
+                DOCMOST
+              </div>
+              <div style={{
+                fontSize: '9px',
+                fontWeight: 600,
+                color: 'var(--SWISSER-accent-primary)',
+                letterSpacing: '2px',
+                textTransform: 'uppercase',
+                lineHeight: 1
+              }}>
+                DOCUMENTATION
+              </div>
+            </div>
           </Group>
 
-          {shareId && (
-            <Group visibleFrom="sm">
-              <SearchControl onClick={shareSearchSpotlight.open} />
-            </Group>
-          )}
-
-          <Group>
-            <>
-              {shareId && (
+          <Group gap="sm">
+            {shareId && (
+              <>
+                <Group visibleFrom="sm">
+                  <SearchControl onClick={shareSearchSpotlight.open} />
+                </Group>
                 <Group hiddenFrom="sm">
                   <SearchMobileControl onSearch={shareSearchSpotlight.open} />
                 </Group>
-              )}
+              </>
+            )}
 
-              <Tooltip label={t("Table of contents")} withArrow>
-                <ActionIcon
-                  variant="default"
-                  style={{ border: "none" }}
-                  onClick={toggleTocMobile}
-                  hiddenFrom="sm"
-                  size="sm"
-                >
-                  <IconList size={20} stroke={2} />
-                </ActionIcon>
-              </Tooltip>
+            <Tooltip label={t("Table of contents")} withArrow>
+              <ActionIcon
+                variant="default"
+                style={{ border: "none" }}
+                onClick={toggleTocMobile}
+                hiddenFrom="sm"
+                size="sm"
+              >
+                <IconList size={20} stroke={2} />
+              </ActionIcon>
+            </Tooltip>
 
-              <Tooltip label={t("Table of contents")} withArrow>
-                <ActionIcon
-                  variant="default"
-                  style={{ border: "none" }}
-                  onClick={toggleToc}
-                  visibleFrom="sm"
-                  size="sm"
-                >
-                  <IconList size={20} stroke={2} />
-                </ActionIcon>
-              </Tooltip>
-            </>
+            <Tooltip label={t("Table of contents")} withArrow>
+              <ActionIcon
+                variant="default"
+                style={{ border: "none" }}
+                onClick={toggleToc}
+                visibleFrom="sm"
+                size="sm"
+              >
+                <IconList size={20} stroke={2} />
+              </ActionIcon>
+            </Tooltip>
 
             <ThemeToggle />
           </Group>

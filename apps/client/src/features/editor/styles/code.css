@@ -1,16 +1,18 @@
 .ProseMirror {
   .codeBlock {
     padding: 4px;
-    border-radius: var(--mantine-radius-default);
-    background-color: light-dark(var(--mantine-color-gray-0),  var(--mantine-color-dark-8));
+    border-radius: var(--SWISSER-radius-md);
+    background-color: light-dark(var(--mantine-color-gray-0), var(--SWISSER-bg-elevated));
+    border: 1px solid light-dark(var(--mantine-color-gray-3), var(--SWISSER-border-color));
     }
 
   pre {
-    padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+    padding: var(--SWISSER-space-md) var(--SWISSER-space-lg);
     margin: 4px;
-    font-family: "JetBrainsMono", var(--mantine-font-family-monospace);
-    border-radius: var(--mantine-radius-default);
+    font-family: var(--mantine-font-family-monospace);
+    border-radius: var(--SWISSER-radius-md);
     tab-size: 4;
+    font-size: 13px;
 
     @mixin light {
       background-color: var(--mantine-color-gray-0);
@@ -18,8 +20,8 @@
     }
 
     @mixin dark {
-      background-color: var(--mantine-color-dark-8);
-      color: var(--mantine-color-dark-1);
+      background-color: var(--SWISSER-bg-elevated);
+      color: var(--SWISSER-text-primary);
     }
 
     code {

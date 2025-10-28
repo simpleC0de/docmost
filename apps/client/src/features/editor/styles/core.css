@@ -1,16 +1,18 @@
 .ProseMirror {
   background-color: light-dark(
     var(--mantine-color-white),
-    var(--mantine-color-dark-7)
+    transparent
   );
   color: light-dark(
     var(--mantine-color-default-color),
-    var(--mantine-color-dark-0)
+    var(--SWISSER-text-secondary)
   );
-  font-size: var(--mantine-font-size-md);
-  line-height: var(--mantine-line-height-xl);
+  font-size: 14px;
+  line-height: 1.7;
   font-weight: 400;
   width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 
   padding-left: 3rem;
   padding-right: 3rem;
@@ -58,38 +60,74 @@
   h6 {
     line-height: 1.1;
     margin-bottom: 10px;
+    @mixin dark {
+      color: var(--SWISSER-text-primary);
+    }
+  }
+
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
   }
 
   code {
     background-color: light-dark(
       var(--mantine-color-gray-0),
-      var(--mantine-color-dark-8)
+      var(--SWISSER-bg-elevated)
     );
-    color: #616161;
+    color: light-dark(
+      #616161,
+      var(--SWISSER-text-primary)
+    );
+    font-family: var(--mantine-font-family-monospace);
+    padding: 2px 6px;
+    border-radius: var(--SWISSER-radius-sm);
+    font-size: 13px;
   }
 
   a {
-    color: light-dark(var(--mantine-color-dark-4), var(--mantine-color-dark-1));
+    color: light-dark(var(--mantine-color-dark-4), var(--SWISSER-accent-hover));
     @mixin light {
       border-bottom: 0.05em solid var(--mantine-color-dark-0);
     }
     @mixin dark {
-      border-bottom: 0.05em solid var(--mantine-color-dark-2);
+      border-bottom: 0.05em solid var(--SWISSER-border-color);
     }
-    /*font-weight: 500; */
     text-decoration: none;
     cursor: pointer;
+    transition: var(--SWISSER-transition-fast);
+  }
+
+  a:hover {
+    @mixin dark {
+      color: var(--SWISSER-text-primary);
+      border-bottom-color: var(--SWISSER-border-hover);
+    }
   }
 
   blockquote {
     padding-left: 25px;
     padding-right: 25px;
-    border-left: 2px solid var(--mantine-color-gray-6);
+    border-left: 3px solid light-dark(
+      var(--mantine-color-gray-6),
+      var(--SWISSER-accent-primary)
+    );
     background-color: light-dark(
       var(--mantine-color-gray-0),
-      var(--mantine-color-dark-8)
+      var(--SWISSER-bg-elevated)
     );
     margin: 0;
+    border-radius: var(--SWISSER-radius-sm);
   }
 
   hr {

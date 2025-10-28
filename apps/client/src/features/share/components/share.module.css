@@ -3,18 +3,45 @@
     border-bottom: 0.05em solid var(--mantine-color-dark-0);
   }
   @mixin dark {
-    border-bottom: 0.05em solid var(--mantine-color-dark-2);
+    border-bottom: 0.05em solid var(--SWISSER-border-color);
   }
 }
 
 .treeNode {
   text-decoration: none;
   user-select: none;
+  transition: var(--SWISSER-transition-fast);
+
+  @mixin dark {
+    color: var(--SWISSER-text-secondary);
+  }
 }
 
-.navbar,
+.treeNode:hover {
+  @mixin dark {
+    color: var(--SWISSER-text-primary);
+    transform: translateY(-1px);
+  }
+}
+
+.navbar {
+  @media (max-width: $mantine-breakpoint-sm) {
+    width: 280px;
+  }
+
+  @mixin dark {
+    background-color: var(--SWISSER-bg-secondary);
+    border-right: 1px solid var(--SWISSER-border-color);
+  }
+}
+
 .aside {
   @media (max-width: $mantine-breakpoint-sm) {
-    width: 350px;
+    width: 280px;
+  }
+
+  @mixin dark {
+    background-color: transparent;
+    border-left: 1px solid var(--SWISSER-border-color);
   }
 }
