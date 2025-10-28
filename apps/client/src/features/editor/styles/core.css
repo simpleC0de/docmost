@@ -60,8 +60,13 @@
   h6 {
     line-height: 1.1;
     margin-bottom: 10px;
+    padding-bottom: 8px;
     @mixin dark {
       color: var(--SWISSER-text-primary);
+      border-bottom: 1px solid var(--SWISSER-border-color);
+    }
+    @mixin light {
+      border-bottom: 1px solid var(--mantine-color-gray-3);
     }
   }
 

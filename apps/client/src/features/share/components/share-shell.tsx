@@ -128,27 +128,40 @@ export default function ShareShell({
 
             <div style={{
               display: 'flex',
-              flexDirection: 'column',
               alignItems: 'center',
-              gap: '2px'
+              gap: '12px'
             }}>
+              <img
+                src="/swisser-logo.png"
+                alt="SWISSER Logo"
+                style={{
+                  height: '36px',
+                  width: 'auto'
+                }}
+              />
               <div style={{
-                fontSize: '20px',
-                fontWeight: 900,
-                letterSpacing: '-0.5px',
-                lineHeight: 1
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '2px'
               }}>
-                DOCMOST
-              </div>
-              <div style={{
-                fontSize: '9px',
-                fontWeight: 600,
-                color: 'var(--SWISSER-accent-primary)',
-                letterSpacing: '2px',
-                textTransform: 'uppercase',
-                lineHeight: 1
-              }}>
-                DOCUMENTATION
+                <div style={{
+                  fontSize: '20px',
+                  fontWeight: 900,
+                  letterSpacing: '-0.5px',
+                  lineHeight: 1
+                }}>
+                  SWISSER
+                </div>
+                <div style={{
+                  fontSize: '9px',
+                  fontWeight: 600,
+                  color: 'var(--SWISSER-accent-primary)',
+                  letterSpacing: '2px',
+                  textTransform: 'uppercase',
+                  lineHeight: 1
+                }}>
+                  DOCS
+                </div>
               </div>
             </div>
           </Group>
