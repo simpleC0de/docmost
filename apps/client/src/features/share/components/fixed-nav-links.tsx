@@ -1,4 +1,4 @@
-import { Box, UnstyledButton } from "@mantine/core";
+import { Box, UnstyledButton, useMantineColorScheme } from "@mantine/core";
 import {
   IconBrandDiscord,
   IconBriefcase,
@@ -30,12 +30,15 @@ const fixedLinks = [
 ];
 
 export default function FixedNavLinks() {
+  const { colorScheme } = useMantineColorScheme();
+  const isLight = colorScheme === 'light';
+
   return (
     <Box
       style={{
         paddingBottom: '16px',
         marginBottom: '16px',
-        borderBottom: '1px solid var(--SWISSER-border-color)',
+        borderBottom: `1px solid ${isLight ? '#e5e5e5' : 'var(--SWISSER-border-color)'}`,
       }}
     >
       {fixedLinks.map((link) => (
@@ -51,7 +54,7 @@ export default function FixedNavLinks() {
             gap: '12px',
             padding: '10px 16px',
             width: '100%',
-            color: 'var(--SWISSER-text-secondary)',
+            color: isLight ? '#262626' : 'var(--SWISSER-text-secondary)',
             borderRadius: 'var(--SWISSER-radius-md)',
             transition: 'var(--SWISSER-transition-fast)',
             textDecoration: 'none',
@@ -59,8 +62,8 @@ export default function FixedNavLinks() {
           styles={{
             root: {
               '&:hover': {
-                backgroundColor: 'var(--SWISSER-bg-tertiary)',
-                color: 'var(--SWISSER-text-primary)',
+                backgroundColor: isLight ? '#e5e5e5' : 'var(--SWISSER-bg-tertiary)',
+                color: isLight ? '#000000' : 'var(--SWISSER-text-primary)',
                 transform: 'translateY(-1px)',
               },
             },
