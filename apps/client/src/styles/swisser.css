@@ -57,16 +57,99 @@
   --mantine-color-default-border: var(--SWISSER-border-color);
 }
 
-/* Editor Headings - Force No Background */
+[data-mantine-color-scheme="light"] .mantine-AppShell-root {
+  --mantine-color-body: #f5f5f5 !important;
+  --mantine-color-default: #fafafa !important;
+}
+
+[data-mantine-color-scheme="light"] .mantine-AppShell-header {
+  background-color: #fafafa !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+}
+
+[data-mantine-color-scheme="light"] .mantine-AppShell-navbar {
+  background-color: #fafafa !important;
+  border-right: 1px solid #e5e5e5 !important;
+}
+
+[data-mantine-color-scheme="light"] .mantine-AppShell-aside {
+  background-color: #f5f5f5 !important;
+  border-left: 1px solid #e5e5e5 !important;
+}
+
+[data-mantine-color-scheme="light"] .mantine-AppShell-main {
+  background-color: #f5f5f5 !important;
+}
+
+/* Body Background Override */
+body[data-mantine-color-scheme="light"] {
+  background-color: #f5f5f5 !important;
+}
+
+/* ProseMirror Light Mode */
+[data-mantine-color-scheme="light"] .ProseMirror {
+  background-color: #fafafa !important;
+  color: #262626 !important;
+}
+
+/* Mantine Container - Light Mode Fix (prevents white background) */
+[data-mantine-color-scheme="light"] .mantine-Container-root {
+  background-color: transparent !important;
+}
+
+/* Tiptap EditorProvider Wrapper DIVs - Transparent in Light Mode */
+[data-mantine-color-scheme="light"] .mantine-Container-root > div,
+[data-mantine-color-scheme="light"] .mantine-Container-root > div > div,
+[data-mantine-color-scheme="light"] .mantine-Container-root div.tiptap {
+  background-color: transparent !important;
+}
+
+/* Editor Headings - Force No Background (Dark & Light Mode) */
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3,
+.ProseMirror h4,
+.ProseMirror h5,
+.ProseMirror h6,
+[data-mantine-color-scheme="light"] .ProseMirror h1,
+[data-mantine-color-scheme="light"] .ProseMirror h2,
+[data-mantine-color-scheme="light"] .ProseMirror h3,
+[data-mantine-color-scheme="light"] .ProseMirror h4,
+[data-mantine-color-scheme="light"] .ProseMirror h5,
+[data-mantine-color-scheme="light"] .ProseMirror h6,
+.tiptap h1,
+.tiptap h2,
+.tiptap h3,
+.tiptap h4,
+.tiptap h5,
+.tiptap h6 {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
 [data-mantine-color-scheme="dark"] .ProseMirror h1,
 [data-mantine-color-scheme="dark"] .ProseMirror h2,
 [data-mantine-color-scheme="dark"] .ProseMirror h3,
 [data-mantine-color-scheme="dark"] .ProseMirror h4,
 [data-mantine-color-scheme="dark"] .ProseMirror h5,
 [data-mantine-color-scheme="dark"] .ProseMirror h6 {
-  background: none !important;
-  background-color: transparent !important;
-  color: var(--SWISSER-text-primary);
+  color: var(--SWISSER-text-primary) !important;
+}
+
+[data-mantine-color-scheme="light"] .ProseMirror h1,
+[data-mantine-color-scheme="light"] .ProseMirror h2,
+[data-mantine-color-scheme="light"] .ProseMirror h3,
+[data-mantine-color-scheme="light"] .ProseMirror h4,
+[data-mantine-color-scheme="light"] .ProseMirror h5,
+[data-mantine-color-scheme="light"] .ProseMirror h6,
+.tiptap h1,
+.tiptap h2,
+.tiptap h3,
+.tiptap h4,
+.tiptap h5,
+.tiptap h6 {
+  color: #1a1a1a !important;
 }
 
 [data-mantine-color-scheme="dark"] .mantine-AppShell-header {

@@ -1,10 +1,10 @@
 .ProseMirror {
   background-color: light-dark(
-    var(--mantine-color-white),
+    #fafafa,
     transparent
   );
   color: light-dark(
-    var(--mantine-color-default-color),
+    #262626,
     var(--SWISSER-text-secondary)
   );
   font-size: 14px;
@@ -61,11 +61,14 @@
     line-height: 1.1;
     margin-bottom: 10px;
     padding-bottom: 8px;
+    background: transparent;
+    background-color: transparent;
     @mixin dark {
       color: var(--SWISSER-text-primary);
       border-bottom: 1px solid var(--SWISSER-border-color);
     }
     @mixin light {
+      color: #1a1a1a;
       border-bottom: 1px solid var(--mantine-color-gray-3);
     }
   }
